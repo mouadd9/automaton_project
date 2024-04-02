@@ -22,7 +22,15 @@ typedef struct
     int nbrEtatsFin;
 } automate;
 
-
+typedef struct
+{
+    int etat1[25];
+    int etat2[25];
+    int etatsdep[25];
+    int etatsuiv[25];
+    int etatinit[25];
+    int etatfin[25];
+} etatspaire;
 
 //-------------fonction1
 // Lecture et stockage des informations de l'automate à partir d'un fichier
@@ -402,19 +410,19 @@ void Union_Automates(automate *a, automate *b)
     }
     for (int i = 0; i < a->nbrEtatsInit; i++)
     {
-        fprintf(p, "0 %d E\n", a->etatsInitial[i]);
+        fprintf(p, "0 %d e\n", a->etatsInitial[i]);
     }
     for (int i = 0; i < a->nbrEtatsFin; i++)
     {
-        fprintf(p, "%d 9 E\n", a->etatsFinal[i]);
+        fprintf(p, "%d 9 e\n", a->etatsFinal[i]);
     }
     for (int i = 0; i < b->nbrEtatsInit; i++)
     {
-        fprintf(p, "0 %d E\n", b->etatsInitial[i]);
+        fprintf(p, "0 %d e\n", b->etatsInitial[i]);
     }
     for (int i = 0; i < b->nbrEtatsFin; i++)
     {
-        fprintf(p, "%d 9 E\n", b->etatsFinal[i]);
+        fprintf(p, "%d 9 e\n", b->etatsFinal[i]);
     }
     fprintf(p, "0\n");
     fprintf(p, "9");
@@ -447,11 +455,11 @@ void Etoile_Automates(automate *a)
     }
     for (int i = 0; i < a->nbrEtatsInit; i++)
     {
-        fprintf(p, "0 %d E\n", a->etatsInitial[i]);
+        fprintf(p, "0 %d e\n", a->etatsInitial[i]);
     }
     for (int i = 0; i < a->nbrEtatsFin; i++)
     {
-        fprintf(p, "%d 9 E\n", a->etatsFinal[i]);
+        fprintf(p, "%d 9 e\n", a->etatsFinal[i]);
     }
     for (int i = 0; i < a->nbrEtatsInit; i++)
     {
@@ -467,7 +475,7 @@ void Etoile_Automates(automate *a)
         {
             if (estDansTableau(a->etatsFinal[j], a->etatsAccessibles1, a->nbrEtatsAccessible1))
             {
-                fprintf(p, "%d %d E\n", a->etatsFinal[j], a->etatsInitial[i]);
+                fprintf(p, "%d %d e\n", a->etatsFinal[j], a->etatsInitial[i]);
             }
         }
 
@@ -475,21 +483,12 @@ void Etoile_Automates(automate *a)
         a->etatsAccessibles1 = NULL;
     }
 
-    fprintf(p, "0 9 E\n");
+    fprintf(p, "0 9 e\n");
     fprintf(p, "0\n");
     fprintf(p, "9");
     fclose(p);
 }
 //-------------fonction17
-typedef struct
-{
-    int etat1[25];
-    int etat2[25];
-    int etatsdep[25];
-    int etatsuiv[25];
-    int etatinit[25];
-    int etatfin[25];
-} etatspaire;
 void Produit_Automates(automate *a, automate *b, etatspaire et)
 {
     FILE *p = fopen("Produit.txt", "w");
@@ -608,6 +607,7 @@ void EtatsAccessibles_utilisant_epsilons(int etatActuel, automate *a)
         }
     }
 }
+
 int si_elle_exist_deja(int debut, int fin, char symbole, int *depa, int *suiv, char *etiq, int compt)
 {
     for (int k = 0; k < compt; k++)
@@ -619,6 +619,7 @@ int si_elle_exist_deja(int debut, int fin, char symbole, int *depa, int *suiv, c
     }
     return 0;
 }
+
 void Suppression_epsilon(automate *a)
 {
     FILE *p = fopen("Sans_epsilons.txt", "w");
