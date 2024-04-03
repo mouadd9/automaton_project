@@ -853,8 +853,8 @@ int main()
                 printf("4. Afficher l'alphabet des etiquettes\n");
                 printf("5. Afficher les etats accessibles\n");
                 printf("6. Generer le fichier DOT et afficher le PNG\n");
-                printf("7. Tester si un mot est engendré par l'automate\n");
-                printf("8. Lire et afficher les mots engendrés par l'automate\n");
+                printf("7. Tester si un mot est engendre par l'automate\n");
+                printf("8. Lire et afficher les mots engendres par l'automate\n");
                 printf("9. Quitter\n");
                 printf("\nvotre choix : ");
                 scanf("%d", &choix1);
