@@ -11,7 +11,18 @@ This project is an implementation of various operations on automata, as defined 
 - Remove epsilon transitions from automata.
 
 ### Initial Automatons
-automaton a
+
+#### automaton a
 ![Initial Automaton](images/1.png)
-automaton b
+
+#### automaton b
 ![Initial Automaton](images/2.png)
+
+### Automatons After Union Operation
+![Automaton After Union](images/3.png)
+
+### Automatons After Product Operation
+![Automaton After Product](images/4.png)
+
+### Automaton b After Kleene Star(Etoile) Operation
+![Automaton After Product](images/5.png)
