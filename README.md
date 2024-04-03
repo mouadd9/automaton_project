@@ -9,6 +9,7 @@ This project is an implementation of various operations on automata, as defined 
 - Generate DOT files and visualize automata as PNG images.
 - Perform automata operations such as union, product, and star.
 - Remove epsilon transitions from automata.
-![Alt text](images/1.png)
-![Alt text](images/2.png)
-![Alt text](images/3.png)
+
+### Initial Automatons
+![Initial Automaton](images/text1.png) ![Initial Automaton](images/1.png)
+![Initial Automaton](images/text2.png) ![Initial Automaton](images/2.png)

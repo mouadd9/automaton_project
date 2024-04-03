@@ -4,11 +4,8 @@ digraph automate {
 	4 -> 5 [label=b];
 	5 -> 4 [label=a];
 	4 -> 4 [label=a];
-	0 -> 5 [label=b];
-	0 -> 4 [label=a];
-	5 -> 5 [label=b];
-	0 [color=green];
-	9 [color=blue];
-	0 [color=blue];
+	4 [color=black];
+	5 [color=black];
+	4 [color=green];
 	5 [color=blue];
 }
