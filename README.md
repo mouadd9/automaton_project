@@ -11,5 +11,7 @@ This project is an implementation of various operations on automata, as defined 
 - Remove epsilon transitions from automata.
 
 ### Initial Automatons
-![Initial Automaton](images/text1.png) ![Initial Automaton](images/1.png)
-![Initial Automaton](images/text2.png) ![Initial Automaton](images/2.png)
+- automaton a
+![Initial Automaton](images/1.png)
+- automaton b
+![Initial Automaton](images/2.png)
