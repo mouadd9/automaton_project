@@ -10,12 +10,14 @@ This project is an implementation of various operations on automata, as defined 
 - Perform automata operations such as union, product, and star.
 - Remove epsilon transitions from automata.
 
+## Demo
+
 ### Initial Automatons
 
-#### automaton a
+- #### automaton a
 ![Initial Automaton](images/1.png)
 
-#### automaton b
+- #### automaton b
 ![Initial Automaton](images/2.png)
 
 ### Automatons After Union Operation
