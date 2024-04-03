@@ -16,12 +16,12 @@ This project is an implementation of various operations on automata, as defined 
 Below are the visualizations of the automata before and after various operations performed:
 
 
-### Initial Automatons
+#### Initial Automatons
 
-- #### automaton a
+- ##### automaton a
 ![Initial Automaton](images/1.png)
 
-- #### automaton b
+- ##### automaton b
 ![Initial Automaton](images/2.png)
 
 ### Automatons After Union Operation
