@@ -19,9 +19,11 @@ Below are the visualizations of the automata before and after various operations
 ### Initial Automatons
 
 <h4 style="color: red;">Automaton A</h4>
+
 ![Initial Automaton](images/1.png)
 
 <h4 style="color: red;">Automaton B</h4>
+
 ![Initial Automaton](images/2.png)
 
 ### Automatons After Union Operation
